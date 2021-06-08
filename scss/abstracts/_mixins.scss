@@ -22,6 +22,7 @@
 // Argument options
 // phone, tab-port, tab-land, big-desktop
 // 1em = 16px
+// ORDER of Implementation: Base + typography > general layout > page layout > components
 
 @mixin respond($breakpoint) {
   @if $breakpoint == big-desktop {
@@ -36,6 +37,11 @@
   }
   @if $breakpoint == tab-port {
     @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
       @content;
     }
   }

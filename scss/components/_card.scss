@@ -179,4 +179,47 @@
     font-size: 6rem;
     font-weight: 100;
   }
+
+  @include respond(tab-port) {
+    height: auto;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    background-color: $color-white;
+
+    &__side {
+      height: auto;
+      position: relative;
+      border-radius: 3px;
+      box-shadow: none;
+
+      &--front {
+        padding-bottom: 0;
+      }
+
+      &--back {
+        position: relative;
+        bottom: 0;
+        height: 30rem;
+        z-index: 100;
+        transform: rotateY(0deg);
+        clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+
+    &__cta {
+      position: relative;
+      width: 100%;
+    }
+
+    &__price-box {
+      margin-bottom: 2rem;
+    }
+
+    &__price-value {
+      font-size: 6rem;
+    }
+  }
 }
