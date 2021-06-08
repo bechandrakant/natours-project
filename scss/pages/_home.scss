@@ -104,3 +104,8 @@
 
   height: 50rem;
 }
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
