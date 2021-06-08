@@ -8,6 +8,16 @@
 
 html {
   font-size: 62.5%;
+
+  @include respond(big-desktop) { // 1800px +
+    font-size: 75%;
+  }
+  @include respond(tab-land) { // 900 - 1200
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) { // upto 900
+    font-size: 50%;
+  }
 }
 
 body {
